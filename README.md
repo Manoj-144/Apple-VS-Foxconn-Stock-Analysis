@@ -1,72 +1,100 @@
 # Apple vs Foxconn Stock Analysis
 
-This project explores the relationship between **Apple Inc.** and **Foxconn**, focusing on their stock performances. Foxconn is a major manufacturer for Apple, producing products like iPhones and iPads, making these two companies closely intertwined in the global supply chain. The analysis looks at stock prices, trading volumes, and the market impact of specific product releases. Additionally, an interactive Tableau dashboard was created to visualize the findings and provide a user-friendly interface for data exploration.
+This project examines the stock performance of **Apple Inc.** and **Foxconn**, focusing on the impact of Apple product releases on both companies' stocks. Given that Foxconn is a major manufacturer for Apple, the study explores how the release of key Apple products correlates with stock price movements and trading volumes. An interactive Tableau dashboard was created to present the analysis results in a dynamic and user-friendly format.
 
 ## Project Overview
 
-The analysis was carried out by collecting product names and release dates for Apple products, using web scraping techniques. The project is not restricted to a particular time period; rather, it focuses on analyzing stock performance from the release dates of selected products. 
+The project is centered around collecting product names and release dates using web scraping and analyzing stock price movements for Apple and Foxconn. The analysis focuses on periods surrounding the release of certain Apple products, instead of a fixed time period, to understand the stock performance before and after these events.
 
 ## Why Compare Apple and Foxconn?
 
-Foxconn, a Taiwanese electronics contract manufacturer, is a key partner of Apple, assembling the majority of its devices. This close connection allows us to study how product releases from Apple can affect both companies' stock prices and trading volumes. By comparing Apple, the brand, and Foxconn, the manufacturer, we can gain insights into how different stages of the supply chain influence market performance.
+Foxconn, being Apple's primary manufacturer for products like iPhones, plays a crucial role in Apple's supply chain. This close relationship allows for a unique opportunity to compare the stock behavior of both companies and analyze how Apple product launches influence Foxconn's stock performance as well. The project aims to highlight the interconnectedness of the two companies in the stock market.
+
+## Libraries and Tools Used
+
+### Data Collection
+- **Web Scraping**:
+  - **BeautifulSoup**: Used for scraping product names and release dates from relevant web pages.
+  - **Requests**: Facilitated the web scraping by fetching HTML content from the web.
+  
+- **API for Stock Data**:
+  - **yfinance**: Collected historical stock data for both Apple and Foxconn.
+
+### Data Cleaning and Analysis
+- **Pandas**: 
+  - Used for data manipulation, cleaning, and organization.
+  - Dataframes were created to store and process stock data for analysis.
+  
+- **NumPy**: 
+  - Used for efficient numerical operations and data preprocessing tasks.
+  
+### Data Visualization
+- **Matplotlib**:
+  - Used to create various charts and plots for analyzing price percent changes and stock volumes.
+  
+- **Seaborn**:
+  - Enhanced the visual quality of the graphs and aided in producing detailed visualizations such as histograms and line charts.
+
+### Dashboard Creation
+- **Tableau**: 
+  - An interactive dashboard was built using Tableau to visualize the stock analysis in a dynamic way. The dashboard allows users to explore data related to Apple and Foxconn stocks through various filters and charts.
 
 ## Steps for Data Collection
 
 1. **Web Scraping**:
-   - I utilized web scraping to gather product release dates and names of significant Apple products. This data was used to align stock performance with the release of these products.
+   - I used BeautifulSoup and Requests to scrape product release dates and names from the web. The scraped data was compiled into a structured format for further analysis.
    
 2. **APIs for Stock Data**:
-   - Historical stock prices and trading volumes were obtained for both Apple and Foxconn using financial data APIs. This data was processed to facilitate analysis related to specific product release periods.
+   - The yfinance library was utilized to fetch historical stock data for both Apple and Foxconn. This included data points such as closing prices, volume, and percentage changes in stock prices.
 
-3. **Data Cleaning and Preprocessing**:
-   - After collecting the data, I cleaned and structured it to ensure consistency. This involved handling missing values and normalizing the datasets for both companies.
+3. **Data Cleaning**:
+   - Using Pandas, I handled missing data, removed outliers, and ensured the datasets for both companies were aligned for comparative analysis. NumPy was used for some numerical operations during the preprocessing steps.
 
 ## Analysis Performed
 
 1. **Product-Based Stock Analysis**:
-   - The stock performance of both Apple and Foxconn was analyzed around the release periods of major Apple products. This included tracking price fluctuations and trading volumes to assess the impact of product launches.
+   - The stock data for both Apple and Foxconn was analyzed in relation to specific Apple product releases. Price fluctuations and trading volume were examined to identify the impact of these launches on the market.
 
 2. **Price and Volume Correlation**:
-   - I examined the correlation between stock prices and trading volumes for both companies, particularly focusing on periods surrounding Apple product releases.
+   - By calculating daily percentage changes in price and comparing stock volumes, I explored the correlation between stock performance and trading volume, especially around product launch periods.
 
 3. **Comparative Analysis**:
-   - Key metrics such as closing prices, daily price changes, and volume changes were compared between the two companies, highlighting their interdependent market behavior.
+   - Key financial metrics such as daily closing prices, percentage changes, and trading volumes were compared between Apple and Foxconn to determine how their stock behaviors diverged or aligned over time.
 
 ## Key Findings from the Analysis
 
 1. **Impact of Apple Product Launches**:
-   - The release of major Apple products such as new iPhones showed a clear impact on Apple's stock price and trading volumes. Foxconn's stock, while less directly influenced, also saw spikes in volume during these periods, reflecting its critical role as Apple's manufacturer.
+   - The release of major Apple products significantly affected Apple's stock price and volume. Foxconn, although less directly impacted, also experienced spikes in trading volume, reflecting the manufacturing role it plays.
 
 2. **Apple Stock Performance**:
-   - On the final analyzed date, Apple's stock closed at **$191.80**, with a **-0.54%** price change. The volume, however, increased dramatically, suggesting high market activity.
+   - Apple's stock closed at **$191.80** on the last analyzed date, reflecting a **-0.54%** price drop, with a substantial volume increase of over **85.78 million units**, indicating high market activity.
 
 3. **Foxconn Stock Performance**:
-   - Foxconn closed at **$101.89** with a **0.48%** increase in price, and trading volumes saw a notable increase as well, mirroring trends seen in Apple's stock.
+   - Foxconn’s stock closed at **$101.89**, with a slight **0.48%** increase in price. Trading volume also rose by **29.12 million units**, indicating significant market interest during the analysis period.
 
 4. **Stock Volume Patterns**:
-   - Apple's stock generally exhibited higher trading volumes than Foxconn's, with key spikes around product launch periods.
+   - The trading volumes for Apple were consistently higher than Foxconn, with spikes around major product releases, such as new iPhones.
 
 ## Graphical Insights
 
 ### 1. **Price Percent Change Histogram**:
-   - This histogram displays the distribution of price changes for both Apple and Foxconn. Apple shows a broader range of price fluctuations, while Foxconn's changes are more concentrated, reflecting its role as a supplier rather than a consumer-facing brand.
+   - This histogram shows the distribution of daily price changes for both Apple and Foxconn. Apple's stock exhibited more volatility in terms of price changes compared to Foxconn, reflecting its more consumer-driven nature.
 
 ### 2. **Volume of Stocks Over Time**:
-   - The volume chart visualizes stock trading activity over time for both companies. Apple's stock consistently shows higher volumes, with sharp increases around product launches, while Foxconn’s trading volume follows a less volatile but still responsive pattern.
+   - This line chart tracks the daily trading volume for both companies, showing Apple’s consistently higher volume. Notable spikes correspond to major product releases, especially for Apple.
 
 ## Interactive Tableau Dashboard
 
-An interactive Tableau dashboard was developed for this project to provide an intuitive and dynamic interface for exploring the analysis results. The dashboard includes the following features:
-- **Product-based Filters**: Allows the user to focus on specific Apple product releases and see their impact on stock performance.
-- **Price and Volume Insights**: A detailed breakdown of price and volume trends for both companies is available, with the ability to drill down into specific time periods and events.
-- **Summary Metrics**: Displays critical information such as closing prices, price changes, and volume changes side by side for easy comparison.
+I created an interactive dashboard in Tableau to allow for an intuitive exploration of the stock data. The dashboard includes:
+- **Product Filters**: Enables users to select specific Apple product releases and analyze their impact on stock performance.
+- **Price and Volume Trends**: Visualizes the price and volume fluctuations for both companies, with easy-to-use filters for specific time periods and events.
+- **Summary Table**: Provides a side-by-side comparison of closing prices, price changes, and trading volumes for both companies.
 
-### Tableau Dashboard Features:
-- **Product Focus**: The dashboard highlights stock performance around key Apple product releases.
-- **Company Filters**: Users can toggle between Apple and Foxconn to see individual or combined performance metrics.
-- **Time Selection**: Adjustable date ranges allow users to explore specific periods of interest, particularly around new product announcements.
+### Key Features of the Tableau Dashboard:
+- **Product Focus**: Users can focus on specific Apple product releases and explore the related stock performance data.
+- **Company-wise Breakdown**: Allows users to switch between Apple and Foxconn for a company-specific analysis.
+- **Interactive Filters**: Users can explore different time frames and compare the performance of both companies over time.
 
 ## Conclusion
 
-This project underscores the significant impact Apple product releases have on both Apple and Foxconn’s stock performance. By analyzing stock data around specific product launches, we can better understand how closely intertwined the two companies are, particularly in terms of market reactions. The interactive Tableau dashboard provides an engaging way to explore these insights and offers a detailed look at price and volume changes for both companies.
-
+This project provides valuable insights into the relationship between Apple and Foxconn's stock performance, particularly around the release of key Apple products. The analysis highlights how interconnected the two companies are and how Apple's product launches significantly affect both stocks. The Tableau dashboard enhances this analysis by offering an interactive platform for data exploration.
