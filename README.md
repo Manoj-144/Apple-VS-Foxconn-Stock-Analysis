@@ -1,9 +1,3 @@
-# Apple-VS-Foxconn-Stock-Analysis
-
-Here’s the updated draft for your GitHub README, incorporating the changes:
-
----
-
 # Apple vs Foxconn Stock Analysis
 
 This project explores the relationship between **Apple Inc.** and **Foxconn**, focusing on their stock performances. Foxconn is a major manufacturer for Apple, producing products like iPhones and iPads, making these two companies closely intertwined in the global supply chain. The analysis looks at stock prices, trading volumes, and the market impact of specific product releases. Additionally, an interactive Tableau dashboard was created to visualize the findings and provide a user-friendly interface for data exploration.
@@ -76,6 +70,3 @@ An interactive Tableau dashboard was developed for this project to provide an in
 
 This project underscores the significant impact Apple product releases have on both Apple and Foxconn’s stock performance. By analyzing stock data around specific product launches, we can better understand how closely intertwined the two companies are, particularly in terms of market reactions. The interactive Tableau dashboard provides an engaging way to explore these insights and offers a detailed look at price and volume changes for both companies.
 
----
-
-Let me know if you'd like any additional tweaks!
